@@ -1,0 +1,50 @@
+﻿@model Lab6_1.Models.cities
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>cities</h4>
+    <hr />
+    <dl class="d-lg-table-cell">
+        <dt>
+            @Html.DisplayNameFor(model => model.city_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.city_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.city)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.city)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.area_km_kv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.area_km_kv)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.city_id }, new { @class = "btn btn-success" }) |
+    @Html.ActionLink("Back to List", "Index", new { @class = "btn btn-lg" })
+</p>

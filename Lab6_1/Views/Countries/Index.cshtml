@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Lab6_1.Models.countries>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="text-info">Coutries data</h2>
+
+<p class="float-lg-right">
+    <b class="btn btn-outline-primary">
+        @Html.ActionLink("Create New", "Create")
+    </b>
+</p>
+<table class="table table-primary">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.country_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.restorant_chain)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.area_km_kv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.president)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.country_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.restorant_chain)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.area_km_kv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.president)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.country_id }, new { @class = "btn btn-success" }) |
+            @Html.ActionLink("Details", "Details", new { id = item.country_id }, new { @class = "btn btn-info" }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.country_id }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

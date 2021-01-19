@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  lab6_1:
+    image: ${DOCKER_REGISTRY-}lab61
+    build:
+      context: .\Lab6_1
+      dockerfile: Dockerfile

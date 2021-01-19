@@ -1,0 +1,58 @@
+﻿@model Lab6_1.Models.countries
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>countries</h4>
+    <hr />
+    <dl class="d-lg-table-cell">
+        <dt>
+            @Html.DisplayNameFor(model => model.country_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.country_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.restorant_chain)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.restorant_chain)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.area_km_kv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.area_km_kv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.president)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.president)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.country_id }, new { @class = "btn btn-success" }) |
+    @Html.ActionLink("Back to List", "Index", new { @class = "btn btn-lg" })
+</p>

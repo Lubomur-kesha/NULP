@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  lab6_1:
+    ports:
+      - "80"
+networks:
+  default:
+    external:
+      name: nat
